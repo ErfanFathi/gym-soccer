@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 register(
     id='Soccer-v0',
     entry_point='gym_soccer.envs:SoccerEnv',
-    timestep_limit=1000,
+    # timestep_limit=1000,
     reward_threshold=1.0,
     nondeterministic = True,
 )
@@ -14,7 +14,7 @@ register(
 register(
     id='SoccerEmptyGoal-v0',
     entry_point='gym_soccer.envs:SoccerEmptyGoalEnv',
-    timestep_limit=1000,
+    # timestep_limit=1000,
     reward_threshold=10.0,
     nondeterministic = True,
 )
@@ -22,7 +22,7 @@ register(
 register(
     id='SoccerScoreGoal-v0',
     entry_point='gym_soccer.envs:SoccerScoreGoalEnv',
-    timestep_limit=1000,
+    # timestep_limit=1000,
     reward_threshold=10.0,
     nondeterministic = True,
 )
@@ -30,7 +30,15 @@ register(
 register(
     id='SoccerAgainstKeeper-v0',
     entry_point='gym_soccer.envs:SoccerAgainstKeeperEnv',
-    timestep_limit=1000,
+    # timestep_limit=1000,
+    reward_threshold=8.0,
+    nondeterministic = True,
+)
+
+register(
+    id='SoccerGoalie-v0',
+    entry_point='gym_soccer.envs:SoccerGoalieEnv',
+    # timestep_limit=1000,
     reward_threshold=8.0,
     nondeterministic = True,
 )
